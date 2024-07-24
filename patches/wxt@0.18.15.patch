@@ -1,0 +1,27 @@
+diff --git a/dist/cli.js b/dist/cli.js
+index 12178d9767e59ea280cfffce1c76d3351896902e..82830460ed55eb4c8f3413e6061ad9d14fbc556e 100644
+--- a/dist/cli.js
++++ b/dist/cli.js
+@@ -3712,6 +3712,7 @@ function createWebExtRunner() {
+         devtools: wxtUserConfig?.openDevtools,
+         startUrl: wxtUserConfig?.startUrls,
+         keepProfileChanges: wxtUserConfig?.keepProfileChanges,
++        profileCreateIfMissing: wxtUserConfig?.profileCreateIfMissing,
+         ...wxt.config.browser === "firefox" ? {
+           firefox: wxtUserConfig?.binaries?.firefox,
+           firefoxProfile: wxtUserConfig?.firefoxProfile,
+diff --git a/dist/index-nWRfwAJi.d.ts b/dist/index-nWRfwAJi.d.ts
+index 5226d5c0944284f4735d9d26beb6810a541f6c5c..a394cf24ed991a7979a9e9b4cbe10aeaed623ac8 100644
+--- a/dist/index-nWRfwAJi.d.ts
++++ b/dist/index-nWRfwAJi.d.ts
+@@ -953,6 +953,10 @@ interface ExtensionRunnerConfig {
+      * @see https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#keep-profile-changes
+      */
+     keepProfileChanges?: boolean;
++    /**
++     * @see https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#profile-create-if-missing
++     */
++    profileCreateIfMissing?: boolean;
+ }
+ interface WxtBuilder {
+     /**

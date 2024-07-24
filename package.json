@@ -15,12 +15,19 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "vue": "^3.4.33"
+    "vue": "^3.4.33",
+    "webext-rpc": "^1.0.4",
+    "webext-zustand": "^0.2.0"
   },
   "devDependencies": {
     "@wxt-dev/module-vue": "^1.0.0",
     "typescript": "^5.5.3",
     "vue-tsc": "^2.0.26",
     "wxt": "^0.18.15"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "wxt@0.18.15": "patches/wxt@0.18.15.patch"
+    }
   }
 }
